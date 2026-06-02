@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>LaJú Papel & Arte | Lista de Material Escolar no Rio de Janeiro</title>
+  <meta name="description" content="LaJú Papel & Arte: lista de material escolar sem sair de casa. Atendimento personalizado, entrega organizada e parceria com escolas no Rio de Janeiro." />
+  <meta name="keywords" content="LaJú Papel & Arte, Laju Papel, lista de material escolar, material escolar Rio de Janeiro, volta às aulas, Colégio Realengo, Colégio Aplicação" />
+  <meta name="author" content="LaJú Papel & Arte" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="LaJú Papel & Arte | Lista de Material Escolar" />
+  <meta property="og:description" content="Mais praticidade para as famílias. Mais organização para as escolas." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/logo-laju.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --azul: #0788b8;
+      --azul-escuro: #075f83;
+      --rosa: #e6007e;
+      --amarelo: #ffd500;
+      --verde-whatsapp: #25D366;
+      --texto: #16222a;
+      --cinza: #f7f9fb;
+      --branco: #ffffff;
+      --sombra: 0 18px 45px rgba(7, 95, 131, 0.14);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      color: var(--texto);
+      background: var(--branco);
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,.9);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(7,136,184,.08);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 20px;
+    }
+
+    .nav img { height: 52px; width: auto; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--azul-escuro);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+      cursor: pointer;
+      border: none;
+      white-space: nowrap;
+    }
+
+    .btn:hover { transform: translateY(-2px); box-shadow: var(--sombra); }
+
+    .btn-primary { background: var(--rosa); color: white; }
+    .btn-secondary { background: var(--azul); color: white; }
+    .btn-whatsapp { background: var(--verde-whatsapp); color: white; }
+    .btn-light { background: white; color: var(--azul-escuro); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 78px 0 80px;
+      background:
+        radial-gradient(circle at 8% 12%, rgba(255,213,0,.25), transparent 22%),
+        radial-gradient(circle at 88% 10%, rgba(230,0,126,.10), transparent 22%),
+        linear-gradient(180deg, #ffffff 0%, #f8fbfd 100%);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -140px;
+      left: -80px;
+      width: 280px;
+      height: 280px;
+      background: var(--amarelo);
+      border-radius: 55% 45% 55% 45%;
+      opacity: .9;
+    }
+
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 52px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      background: rgba(7,136,184,.10);
+      color: var(--azul-escuro);
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: .85rem;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(2.35rem, 5vw, 4.8rem);
+      line-height: 1.04;
+      letter-spacing: -2px;
+      color: var(--texto);
+      margin-bottom: 24px;
+    }
+
+    h1 span { color: var(--rosa); }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: #46545d;
+      max-width: 640px;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      color: #5b6972;
+      font-size: .92rem;
+      font-weight: 600;
+    }
+
+    .trust-row span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      padding: 9px 12px;
+      border-radius: 14px;
+      box-shadow: 0 8px 28px rgba(7,95,131,.08);
+    }
+
+    .hero-card {
+      background: white;
+      border-radius: 34px;
+      padding: 34px;
+      box-shadow: var(--sombra);
+      position: relative;
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      right: -40px;
+      width: 220px;
+      height: 220px;
+      background: rgba(7,136,184,.12);
+      border-radius: 50%;
+    }
+
+    .hero-card img {
+      width: 100%;
+      max-width: 440px;
+      margin: 0 auto 26px;
+      display: block;
+      position: relative;
+      z-index: 2;
+    }
+
+    .mini-card {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      gap: 12px;
+    }
+
+    .mini-card div {
+      background: var(--cinza);
+      border-radius: 18px;
+      padding: 16px;
+      font-weight: 700;
+      color: var(--azul-escuro);
+    }
+
+    section { padding: 84px 0; }
+
+    .section-title {
+      max-width: 760px;
+      margin-bottom: 36px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      letter-spacing: -1px;
+      color: var(--texto);
+      margin-bottom: 16px;
+    }
+
+    .section-title p { color: #5a6871; font-size: 1.05rem; }
+
+    .steps, .cards, .partners {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .step, .card, .partner-card {
+      background: white;
+      border: 1px solid rgba(7,136,184,.12);
+      border-radius: 24px;
+      padding: 26px;
+      box-shadow: 0 12px 32px rgba(7,95,131,.07);
+    }
+
+    .number {
+      width: 42px;
+      height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--rosa);
+      color: white;
+      border-radius: 50%;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .step h3, .card h3, .partner-card h3 {
+      color: var(--azul-escuro);
+      font-size: 1.08rem;
+      margin-bottom: 8px;
+    }
+
+    .step p, .card p, .partner-card p { color: #5b6972; font-size: .95rem; }
+
+    .light-section { background: var(--cinza); }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .highlight-box {
+      background: var(--azul);
+      color: white;
+      border-radius: 32px;
+      padding: 38px;
+      box-shadow: var(--sombra);
+    }
+
+    .highlight-box h2 { color: white; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.12; margin-bottom: 18px; }
+    .highlight-box p { color: rgba(255,255,255,.9); }
+
+    .cards { grid-template-columns: repeat(3, 1fr); }
+
+    .icon {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .partners { grid-template-columns: repeat(2, 1fr); }
+
+    .partner-card {
+      min-height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: linear-gradient(135deg, white, #fbfdff);
+    }
+
+    .mission {
+      text-align: center;
+      background:
+        linear-gradient(135deg, rgba(230,0,126,.92), rgba(7,136,184,.92));
+      color: white;
+      border-radius: 36px;
+      padding: 58px 38px;
+      box-shadow: var(--sombra);
+    }
+
+    .mission h2 { font-size: clamp(2rem, 4vw, 3.4rem); margin-bottom: 18px; }
+    .mission p { max-width: 840px; margin: 0 auto; font-size: 1.18rem; color: rgba(255,255,255,.94); }
+
+    .cta {
+      background: var(--azul-escuro);
+      color: white;
+      text-align: center;
+      padding: 72px 0;
+    }
+
+    .cta h2 { font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.12; margin-bottom: 16px; }
+    .cta p { color: rgba(255,255,255,.86); margin-bottom: 28px; }
+
+    footer {
+      background: #071f2d;
+      color: white;
+      padding: 34px 0;
+    }
+
+    .footer-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-grid img { height: 54px; filter: brightness(1.05); }
+    .footer-grid p { color: rgba(255,255,255,.78); font-size: .92rem; }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 30;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: var(--verde-whatsapp);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      box-shadow: 0 16px 36px rgba(37,211,102,.36);
+    }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hero-grid, .two-col { grid-template-columns: 1fr; }
+      .hero { padding-top: 48px; }
+      .hero-card { min-height: auto; }
+      .steps, .cards { grid-template-columns: repeat(2, 1fr); }
+      .partners { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .nav img { height: 42px; }
+      section { padding: 62px 0; }
+      .steps, .cards { grid-template-columns: 1fr; }
+      .hero-actions .btn { width: 100%; }
+      h1 { letter-spacing: -1px; }
+      .hero-card { padding: 24px; border-radius: 24px; }
+      .highlight-box, .mission { border-radius: 26px; padding: 30px 22px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "LaJú Papel & Arte",
+    "description": "Serviço personalizado para listas de material escolar no Rio de Janeiro.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rio de Janeiro",
+      "addressRegion": "RJ",
+      "addressCountry": "BR"
+    },
+    "telephone": "+55 21 99834-9688",
+    "url": "https://seudominio.com.br",
+    "sameAs": ["https://www.instagram.com/lajupapelearte"]
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="#inicio" aria-label="LaJú Papel & Arte"><img src="assets/logo-laju.png" alt="Logo LaJú Papel & Arte"></a>
+      <nav class="nav-links">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#escolas">Escolas parceiras</a>
+        <a class="btn btn-primary" href="https://wa.me/5521998349688?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20lista%20de%20material%20escolar." target="_blank" rel="noopener">Pedir orçamento</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">✈️ Solução personalizada para listas escolares</div>
+          <h1>Menos tempo comprando materiais. <span>Mais tempo para o que importa.</span></h1>
+          <p>A LaJú Papel & Arte simplifica a compra da lista escolar com atendimento personalizado, separação cuidadosa e entrega organizada para famílias e instituições de ensino.</p>
+          <div class="hero-actions">
+            <a class="btn btn-whatsapp" href="https://wa.me/5521998349688?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20lista%20de%20material%20escolar." target="_blank" rel="noopener">💬 Solicitar orçamento</a>
+            <a class="btn btn-secondary" href="https://www.instagram.com/lajupapelearte" target="_blank" rel="noopener">📸 Ver Instagram</a>
+          </div>
+          <div class="trust-row">
+            <span>✅ Lista conferida item por item</span>
+            <span>🏫 Parceria com escolas</span>
+            <span>🚚 Entrega ou retirada facilitada</span>
+          </div>
+        </div>
+        <div class="hero-card">
+          <img src="assets/logo-laju.png" alt="LaJú Papel & Arte - lista de material escolar">
+          <div class="mini-card">
+            <div>Lista de material escolar sem sair de casa</div>
+            <div>Atendimento próximo, organizado e confiável</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona">
+      <div class="container">
+        <div class="section-title">
+          <h2>Como funciona</h2>
+          <p>Um processo simples, pensado para reduzir a correria da volta às aulas.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><span class="number">1</span><h3>Envie sua lista</h3><p>A família compartilha a lista de material escolar pelo WhatsApp.</p></div>
+          <div class="step"><span class="number">2</span><h3>Nós separamos</h3><p>A LaJú organiza os itens de forma personalizada.</p></div>
+          <div class="step"><span class="number">3</span><h3>Conferimos tudo</h3><p>Cada material é conferido com atenção antes da entrega.</p></div>
+          <div class="step"><span class="number">4</span><h3>Você recebe</h3><p>Entrega direta ou retirada facilitada, conforme combinado.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="light-section" id="diferenciais">
+      <div class="container two-col">
+        <div class="highlight-box">
+          <h2>Mais do que materiais escolares.</h2>
+          <p>Entregamos praticidade, confiança e uma experiência mais leve para famílias e escolas no período da volta às aulas.</p>
+        </div>
+        <div class="cards">
+          <div class="card"><span class="icon">❤️</span><h3>Atendimento personalizado</h3><p>Cada lista é tratada de forma individual.</p></div>
+          <div class="card"><span class="icon">⏱️</span><h3>Economia de tempo</h3><p>Menos filas, deslocamentos e preocupação.</p></div>
+          <div class="card"><span class="icon">📦</span><h3>Organização</h3><p>Separação cuidadosa e conferência item por item.</p></div>
+          <div class="card"><span class="icon">🤝</span><h3>Parceria</h3><p>Apoio próximo para famílias e instituições de ensino.</p></div>
+          <div class="card"><span class="icon">⭐</span><h3>Qualidade</h3><p>Produtos selecionados e fornecedores confiáveis.</p></div>
+          <div class="card"><span class="icon">🏫</span><h3>Experiência escolar</h3><p>Mais valor para o relacionamento escola-família.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="escolas">
+      <div class="container">
+        <div class="section-title">
+          <h2>Escolas parceiras</h2>
+          <p>A LaJú já atende famílias em parceria com instituições reconhecidas no Rio de Janeiro.</p>
+        </div>
+        <div class="partners">
+          <div class="partner-card"><h3>Colégio Realengo</h3><p>Parceria fidelizada para atendimento de listas escolares.</p></div>
+          <div class="partner-card"><h3>Colégio Aplicação</h3><p>Parceria com foco em praticidade e organização para famílias.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="light-section">
+      <div class="container">
+        <div class="mission">
+          <h2>Nossa missão</h2>
+          <p>Transformar a experiência da volta às aulas em um processo mais simples, organizado e tranquilo para famílias e escolas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Pronto para simplificar sua lista escolar?</h2>
+        <p>Fale com a LaJú e solicite seu orçamento pelo WhatsApp.</p>
+        <a class="btn btn-light" href="https://wa.me/5521998349688?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20lista%20de%20material%20escolar." target="_blank" rel="noopener">💬 Chamar no WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <img src="assets/logo-laju.png" alt="LaJú Papel & Arte">
+        <p>LaJú Papel & Arte — Rio de Janeiro, RJ</p>
+      </div>
+      <div>
+        <p><strong>Instagram:</strong> @lajupapelearte</p>
+        <p><strong>WhatsApp:</strong> (21) 99834-9688</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/5521998349688?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20lista%20de%20material%20escolar." target="_blank" rel="noopener" aria-label="Falar com a LaJú no WhatsApp">💬</a>
+</body>
+</html>
