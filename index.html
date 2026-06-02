@@ -316,11 +316,23 @@
     .partners { grid-template-columns: repeat(2, 1fr); }
 
     .partner-card {
-      min-height: 150px;
+      min-height: 220px;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
+      text-align: center;
       background: linear-gradient(135deg, white, #fbfdff);
+    }
+
+    .partner-card img {
+      max-width: 190px;
+      max-height: 110px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      margin-bottom: 18px;
+      filter: drop-shadow(0 8px 14px rgba(7,95,131,.10));
     }
 
     .mission {
@@ -497,8 +509,16 @@
           <p>A LaJú já atende famílias em parceria com instituições reconhecidas no Rio de Janeiro.</p>
         </div>
         <div class="partners">
-          <div class="partner-card"><h3>Colégio Realengo</h3><p>Parceria fidelizada para atendimento de listas escolares.</p></div>
-          <div class="partner-card"><h3>Colégio Aplicação</h3><p>Parceria com foco em praticidade e organização para famílias.</p></div>
+          <div class="partner-card">
+            <img src="assets/colegio-realengo.jpeg" alt="Logo Colégio Realengo">
+            <h3>Colégio Realengo</h3>
+            <p>Parceria fidelizada para atendimento de listas escolares.</p>
+          </div>
+          <div class="partner-card">
+            <img src="assets/colegio-aplicacao.jpeg" alt="Logo Colégio Aplicação">
+            <h3>Colégio Aplicação</h3>
+            <p>Parceria com foco em praticidade e organização para famílias.</p>
+          </div>
         </div>
       </div>
     </section>
